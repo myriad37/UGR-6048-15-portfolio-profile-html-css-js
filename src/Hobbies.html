@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/stylesheethobbies.css" />
     <script
       src="https://kit.fontawesome.com/37ec5bcc2a.js"
       crossorigin="anonymous"
@@ -20,45 +21,52 @@
         <a href="contactMe.html">Contact me</a>
       </nav>
     </header>
-    <div><h2 class="title">Hobbies</h2></div>
-    <section class="middlehobby">
-      <div class="slider-container">
-        <div class="slider">
-          <div class="slides" id="slides">
-            <img
-              src="/Images/walks.png"
-              alt="https://via.placeholder.com/800x400?text=Slide+1"
-            />
-            <img
-              src="/Images/tea.png"
-              alt="https://via.placeholder.com/800x400?text=Slide+2"
-            />
-            <img
-              src="/Images/library.png"
-              alt="https://via.placeholder.com/800x400?text=Slide+3"
-            />
-          </div>
-        </div>
-        <div class="controls">
-          <button class="control" id="prev">Prev</button>
-          <button class="control" id="next">Next</button>
-        </div>
-      </div>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Hobbies</title>
+        <link rel="stylesheet" href="styles.css" />
+      </head>
+      <body>
+        <div class="container">
+          <h2 class="title">Hobbies</h2>
+          <section class="middlehobby">
+            <div class="slider-container">
+              <div class="slider">
+                <div class="slides" id="slides">
+                  <img src="/Images/walks.png" alt="Walks" />
+                  <img src="/Images/tea.png" alt="Tea" />
+                  <img src="/Images/library.png" alt="Library" />
+                </div>
+              </div>
+              <div class="controls">
+                <button class="control" id="prev">Prev</button>
+                <button class="control" id="next">Next</button>
+              </div>
+            </div>
 
-      <div class="section-below" id="sectionBelow">
-        <h2>Walks</h2>
-        <p>
-          Walking clears my mind in ways nothing else can. It gives me space to
-          reflect, sort out my thoughts, or even let go of thinking altogether
-          and just be present. Sometimes I find answers; other times, I simply
-          find peace.
-        </p>
-        <p>
-          <audio src="audio.mp3"></audio>and sometimes i litsen to classical
-          music while doing so
-        </p>
-      </div>
-    </section>
+            <div class="section-below" id="sectionBelow">
+              <h2>Walks</h2>
+              <p>
+                Walking clears my mind in ways nothing else can. It gives me
+                space to reflect, sort out my thoughts, or even let go of
+                thinking altogether and just be present. Sometimes I find
+                answers; other times, I simply find peace.
+              </p>
+              <p>
+                <audio src="/audio.mp3" controls></audio> And sometimes I listen
+                to classical music while doing so.
+              </p>
+            </div>
+          </section>
+        </div>
+
+        <script src="script.js"></script>
+      </body>
+    </html>
+
     <footer>
       <div>
         <h2 class="logo">Kalafat Tezazu</h2>

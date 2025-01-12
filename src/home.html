@@ -3,13 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/stylesheet1.css" />
 
+    <script src="/src/home.js"></script>
     <script
       src="https://kit.fontawesome.com/37ec5bcc2a.js"
       crossorigin="anonymous"
     ></script>
     <title>portfolio website</title>
   </head>
+  <script src="/src/home.js"></script>
   <body>
     <header class="homeheader">
       <h2 class="logo">Kalafat Tezazu</h2>
@@ -43,63 +46,48 @@
     <div class="quote" id="1">"A learner, a dreamer, and a doer."</div>
     <section class="bottomhome">
       <div class="container">
+        <button class="carousel-button carousel-button--prev">&lt;</button>
         <div class="card__container">
           <article class="card__article">
-            <img src="Images/walks.png" alt="image" class="card__img" />
-
-            <div class="card__data">
-              <h3 class="card__title">Hobbies</h3>
-              <p>
-                want to know more about how i intake take and balance my
-                dopamine
-              </p>
-            </div>
-
-            <a href="Hobbies.html" class="card__button">
-              View More <i class="ri-arrow-right-line"></i>
-            </a>
+            <img src="/Images/walks.png" alt="Hobbies" class="card__img" />
+            <h3>Hobbies</h3>
+            <p>Want to know more about how I balance my dopamine?</p>
           </article>
 
           <article class="card__article">
-            <img src="/Images/adventures.png" alt="image" class="card__img" />
-
-            <div class="card__data">
-              <h3 class="card__title">my Adventures</h3>
-              <p>as a person with a life and a family, i have been to places</p>
-            </div>
-
-            <a href="Adventures.html" class="card__button">
-              View More <i class="ri-arrow-right-line"></i>
-            </a>
+            <img
+              src="/Images/adventures.png"
+              alt="Adventures"
+              class="card__img"
+            />
+            <h3>Adventures</h3>
+            <p>As a person with a life, I've been to places.</p>
           </article>
 
           <article class="card__article">
-            <img src="/Images/educv.png" alt="image" class="card__img" />
-
-            <div class="card__data">
-              <h3 class="card__title">EducationandCv</h3>
-              <p>Education is the key to the future, they said</p>
-            </div>
-
-            <a href="EducationandCv.html" class="card__button">
-              View More <i class="ri-arrow-right-line"></i>
-            </a>
+            <img
+              src="/Images/educv.png"
+              alt="Education and CV"
+              class="card__img"
+            />
+            <h3>Education & CV</h3>
+            <p>Education is the key to the future, they said.</p>
           </article>
+
           <article class="card__article">
-            <img src="/Images/contactme.png" alt="image" class="card__img" />
-
-            <div class="card__data">
-              <h3 class="card__title">contactMe</h3>
-              <p>lets talk</p>
-            </div>
-
-            <a href="contactMe.html" class="card__button">
-              View More <i class="ri-arrow-right-line"></i>
-            </a>
+            <img
+              src="/Images/contactme.png"
+              alt="Contact Me"
+              class="card__img"
+            />
+            <h3>Contact Me</h3>
+            <p>Let's talk!</p>
           </article>
         </div>
+        <button class="carousel-button carousel-button--next">&gt;</button>
       </div>
     </section>
+
     <footer>
       <div>
         <h2 class="logo">Kalafat Tezazu</h2>
@@ -118,3 +106,4 @@
     </footer>
   </body>
 </html>
+

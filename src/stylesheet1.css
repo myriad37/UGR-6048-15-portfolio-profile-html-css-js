@@ -1,0 +1,457 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+  }
+  
+  body {
+    
+    line-height: 1.6;
+    background-color: #1d2749; 
+    color: #ffffff; 
+    overflow-x: hidden;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 100px;
+    background-color: #2B3964;
+  }
+  
+  header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+  }
+  
+  header .nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  header .nav a:hover {
+    color: #00bcd4; /* Light cyan */
+  }
+  
+  .tophome {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 50px;
+  }
+  
+  .tophome .left h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+  }
+  
+  .tophome .left p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .tophome .right img {
+    width: 200px;
+    height: 200px;
+    border-radius: 15%;
+    border: 1px solid #000000;
+  }
+  
+  .tophome .right .description-box {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 1rem;
+  }
+  
+  .quote {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 20px 0;
+    color: #ffffff;
+    font-style: italic;
+  }
+  
+  .bottomhome .container {
+    padding: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .card__article {
+    background-color: #2e3a5c;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .card__article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .card__img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .card__data {
+    margin: 15px 0;
+  }
+  
+  .card__title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+  }
+  
+  .card__button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #00bcd4;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .card__button:hover {
+    background-color: #0097a7;
+  }
+  
+  footer {
+    background-color: #000000;
+    padding: 20px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    color: #ffffff;
+  }
+  
+  footer .icons a {
+    margin-right: 15px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+  }
+  
+  footer .icons a:hover {
+    color: #ffffff;
+  }
+  /* Carousel Wrapper */
+/* Carousel Container */
+.bottomhome .container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Carousel Track */
+  .card__container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    position: relative;
+    gap: -100px; /* Negative gap to create the overlap */
+  }
+  
+  /* Individual Cards */
+  .card__article {
+    flex: 0 0 30%; /* Show part of the next and previous cards */
+    background-color: #2e3a5c;
+    border-radius: 10px;
+    text-align: center;
+    overflow: hidden;
+    transform: scale(0.9);
+    transition: transform 0.3s ease, z-index 0.3s ease;
+    z-index: 1;
+  }
+  
+  .card__article:hover {
+    transform: scale(1);
+    z-index: 2;
+  }
+  
+  .card__img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  /* Navigation Buttons */
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+  }
+  
+  .carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .carousel-button--prev {
+    left: 20px;
+  }
+  
+  .carousel-button--next {
+    right: 20px;
+  }
+  
+  /* Responsive Adjustments */
+ /* Phone Portrait (Up to 480px width) */
+@media screen and (max-width: 480px) {
+  header {
+    padding: 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .tophome {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .tophome .left h1 {
+    font-size: 2rem;
+  }
+
+  .tophome .right img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .card__article {
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    transform: scale(1);
+  }
+
+  .carousel-button {
+    display: none;
+  }
+}
+
+/* Phone Landscape (481px to 768px width) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  header {
+    padding: 30px;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .tophome {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+  }
+
+  .tophome .left h1 {
+    font-size: 2.5rem;
+  }
+
+  .tophome .right img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .card__article {
+    flex: 0 0 48%;
+    transform: scale(1);
+  }
+}
+
+/* Tablet Portrait (769px to 1024px width) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  header {
+    padding: 50px;
+    justify-content: space-between;
+  }
+
+  .tophome {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 40px;
+  }
+
+  .tophome .left h1 {
+    font-size: 3rem;
+  }
+
+  .tophome .right img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .card__article {
+    flex: 0 0 45%;
+  }
+}
+
+/* Tablet Landscape (1025px to 1280px width) */
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+  header {
+    padding: 60px;
+  }
+
+  .tophome {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 50px;
+  }
+
+  .tophome .left h1 {
+    font-size: 3.5rem;
+  }
+
+  .tophome .right img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .card__article {
+    flex: 0 0 30%;
+  }
+}
+/* Phone Portrait (Up to 480px width) */
+@media screen and (max-width: 480px) {
+  header {
+    padding: 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .tophome {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .tophome .left h1 {
+    font-size: 2rem;
+  }
+
+  .tophome .right img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .card__article {
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    transform: scale(1);
+  }
+
+  .carousel-button {
+    display: none;
+  }
+}
+
+/* Phone Landscape (481px to 768px width) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  header {
+    padding: 30px;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .tophome {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+  }
+
+  .tophome .left h1 {
+    font-size: 2.5rem;
+  }
+
+  .tophome .right img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .card__article {
+    flex: 0 0 48%;
+    transform: scale(1);
+  }
+}
+
+/* Tablet Portrait (769px to 1024px width) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  header {
+    padding: 50px;
+    justify-content: space-between;
+  }
+
+  .tophome {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 40px;
+  }
+
+  .tophome .left h1 {
+    font-size: 3rem;
+  }
+
+  .tophome .right img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .card__article {
+    flex: 0 0 45%;
+  }
+}
+
+/* Tablet Landscape (1025px to 1280px width) */
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+  header {
+    padding: 60px;
+  }
+
+  .tophome {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 50px;
+  }
+
+  .tophome .left h1 {
+    font-size: 3.5rem;
+  }
+
+  .tophome .right img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .card__article {
+    flex: 0 0 30%;
+  }
+}
+
+  
