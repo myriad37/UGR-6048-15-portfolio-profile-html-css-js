@@ -7,6 +7,7 @@
       src="https://kit.fontawesome.com/37ec5bcc2a.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="/src/adventures.css" />
     <title>portfolio website</title>
   </head>
   <body>
@@ -20,41 +21,49 @@
         <a href="contactMe.html">Contact me</a>
       </nav>
     </header>
-    <div>
+
+    <div class="container">
       <h2 class="title">Adventures</h2>
-      <div>
-        <p>
-          "I may not have trekked the world, but I’ve cherished the time spent
-          creating stories and traditions with the people closest to me, my
-          family and friends.I had joy in spenting time,good and the bad,
-          visiting, looking through the eyes and people that i can view the
-          world through I think that is more than visiting a non-living thing i
-          think"
-        </p>
-      </div>
+      <p class="intro">
+        "I may not have trekked the world, but I’ve cherished the time spent
+        creating stories and traditions with the people closest to me, my family
+        and friends. I had joy in spending time, good and bad, visiting, looking
+        through the eyes of people that I can view the world through. I think
+        that is more than visiting a non-living thing."
+      </p>
+
+      <section class="adventures">
+        <article class="adventure-item" id="1">
+          <img src="/Images/entoto.png" alt="Entoto Park" />
+          <div>
+            <p>Visiting Entoto Park at my 18<sup>th</sup> birthday</p>
+            <video id="video-entoto" src="entotofreres.mp4" controls></video>
+          </div>
+        </article>
+
+        <article class="adventure-item" id="2">
+          <div>
+            <p>
+              My cousins on my mother's side, lots of laughter and lots of joy
+            </p>
+          </div>
+          <div class="gallery">
+            <img src="/Images/cousinsm1.png" alt="Cousins 1" />
+            <img src="/Images/cousinsm2.png" alt="Cousins 2" />
+          </div>
+        </article>
+
+        <article class="adventure-item" id="3">
+          <img src="/Images/withgradma.png" alt="With Grandma" />
+          <div>
+            <p>Holidays with my grandma</p>
+          </div>
+        </article>
+      </section>
     </div>
-    <section>
-      <article class="adventures" id="1">
-        <div><img src="/Images/entoto.png" alt="photo" /></div>
-        <div>
-          <p>visiiting Entoto park at my 18 <sup>th</sup> birthday</p>
-          <video src="entotofreres.mp4"></video>
-        </div>
-      </article>
-      <article class="adventures" id="2">
-        <div>
-          my cousins on my mother's side, lots of laughters and lots of joy"
-        </div>
-        <div>
-          <img src="/Images/cousinsm1.png" alt="photo" />
-          <img src="/Images/cousinsm2.png" alt="photo" />
-        </div>
-      </article>
-      <article class="adventures" id="3">
-        <div><img src="/Images/withgradma.png" alt="photo" /></div>
-        <div>holydays with my grandma</div>
-      </article>
-    </section>
+
+    <script src="/src/adventures.js"></script>
+
     <footer>
       <div>
         <h2 class="logo">Kalafat Tezazu</h2>
@@ -73,3 +82,4 @@
     </footer>
   </body>
 </html>
+
